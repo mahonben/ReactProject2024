@@ -1,6 +1,7 @@
 Button{
     margin: 5px;
     padding: 3px;
+
 }
 p{
     background-color: gold;
@@ -15,6 +16,6 @@ p{
     background-color: rgb(45, 237, 46);
 }
 .bg-red
- {
-     background-color: rgba(255, 0, 0, 0.76);
- }
+{
+    background-color: rgba(255, 0, 0, 0.76);
+}

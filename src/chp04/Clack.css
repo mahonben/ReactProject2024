@@ -1,0 +1,12 @@
+div{
+    border-width: 20px;
+    border-style: groove;
+    border-color: gold;
+    background-color: skyblue;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+}

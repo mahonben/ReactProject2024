@@ -3,18 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './chp03/Book.css'
 import './chp04/Button.css'
+import './chp04/Clack.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Library from "./chp03/Library";
 import Button from "./chp04/Button";
 import ConfirmDialog from "./chp04/ConfirmDialog";
+import Clock from "./chp04/Clock";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <ConfirmDialog />
-  </React.StrictMode>
-);
+setInterval(()=>{
+        root.render(
+            <React.StrictMode>
+                <Clock />
+            </React.StrictMode>
+        );
+    }
+
+)
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
