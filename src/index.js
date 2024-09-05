@@ -19,7 +19,6 @@ setInterval(()=>{
             </React.StrictMode>
         );
     }
-
 )
 
 

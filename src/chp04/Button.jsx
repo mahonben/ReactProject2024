@@ -8,7 +8,6 @@ function Button(props){
             </b>
         </button>
 
-
     )
 }
 
