@@ -4,6 +4,7 @@ import './index.css';
 // import './chp03/Book.css'
 // import './chp04/Button.css'
 //import './chp04/Clack.css'
+import './chp06/NotificationCss.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Library from "./chp03/Library";
@@ -11,12 +12,13 @@ import Button from "./chp04/Button";
 import ConfirmDialog from "./chp04/ConfirmDialog";
 import Clock from "./chp04/Clock";
 import CommentList from "./chp05/CommentList";
+import NotificationList from "./chp06/NotificationList";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(()=>{
         root.render(
             <React.StrictMode>
-                <CommentList />
+                <NotificationList />
             </React.StrictMode>
         );
     }

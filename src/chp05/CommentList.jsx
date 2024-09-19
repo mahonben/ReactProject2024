@@ -25,6 +25,7 @@ function CommentList(props) {
                     comment={comment.comment} />
                 );
             })}
+
         </div>
     );
 }
