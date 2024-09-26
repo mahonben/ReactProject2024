@@ -4,12 +4,15 @@ import Notification from "./Notification";
 
 const reservedNotifications =[
     {
+        id:1,
         message: "안녕하세요. 집가고싶네요",
     },
     {
+        id:2,
         message: "현재 수업중인 웹프로그래밍활용 수업을 열심히 들으세요.",
     },
     {
+        id:3,
         message: "열심히 듣고 Git에 Commit한 후 하교하시면 됩니다.",
     },
 ];
@@ -37,6 +40,9 @@ class NotificationList extends  React.Component {
                     notifications: notifications,
                 });
             } else {
+                this.setState({
+                   notifications:[],
+                });
                 clearInterval(timer);
             }
         }, 1000);
@@ -52,7 +58,10 @@ class NotificationList extends  React.Component {
         return(
           <div>
               {this.state.notifications.map((notification) => {
-                  return <Notification message={notification.message} />
+                  return <Notification
+                      key={notification.id}
+                      id={notification.id}
+                      message={notification.message} />
                   })}
           </div>
         );
