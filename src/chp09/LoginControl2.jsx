@@ -2,10 +2,11 @@ import React, {useState} from "react";
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
 import Greeting from "./Greeting";
+import WarningBanner from "./WarningBanner";
 
 
 
-function LoginControl(props) {
+function LoginControl2(props) {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const handleLoginClick=()=> {
@@ -16,23 +17,18 @@ function LoginControl(props) {
         setIsLoggedIn(false);
     }
 
-    let btn;
-    if(isLoggedIn){
-        btn = <LogoutButton onClick={handleLogoutClick}/>
-
-    }else{
-        btn = <LoginButton onClick={handleLoginClick}/>
-        }
-
     return(
         <div>
+            <WarningBanner warning={false}/>
             <Greeting isLoggedIn={isLoggedIn}/>
-            {btn}
+            { isLoggedIn ?
+                <LogoutButton onClick={handleLogoutClick}/>:
+                <LoginButton onClick={handleLoginClick}/>}
         </div>
     );
 }
 
-export default LoginControl
+export default LoginControl2;
 
 
 
